@@ -57,6 +57,8 @@ typedef struct {
 	char damp;
 	char revdir;
 	char timing;
+	char sine_range;
+	char sine_power;
 	char freq_min;
 	char freq_max;
 	char duty_min;
@@ -89,6 +91,7 @@ typedef struct {
 } PID;
 
 extern char _cfg[], _cfg_start[], _cfg_end[], _rom[], _ram[], _boot[], _vec[]; // Linker exports
+extern const uint16_t sinedata[];
 extern const Cfg cfgdata;
 extern Cfg cfg;
 extern int throt, erpt, erpm, temp, volt, curr, csum, dshotval, beepval;
